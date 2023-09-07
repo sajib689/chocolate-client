@@ -13,12 +13,12 @@ const router = createBrowserRouter([
   {
     path: '/allchocolate',
     element: <AllChocolate></AllChocolate>,
-    loader: () => fetch('http://localhost:3000/chocolates')
+    loader: () => fetch('https://chocolate-server-blush.vercel.app/chocolates')
   },
   {
     path: '/update/:id',
     element: <Update></Update>,
-    loader: ({params}) => fetch(`http://localhost:3000/chocolates/${params.id}`)
+    loader: ({params}) => fetch(`https://chocolate-server-blush.vercel.app/chocolates/${params.id}`)
   },
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(

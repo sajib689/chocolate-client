@@ -8,7 +8,7 @@ const ChocolateCard = ({allChocolate}) => {
     const [allChocolates, setAllChocolates] = useState(allChocolate)
     const {_id, name, country,image, category} = allChocolates
     const handleDelete = _id => {
-        fetch(`http://localhost:3000/chocolates/${_id}`,{
+        fetch(`https://chocolate-server-blush.vercel.app/chocolates/${_id}`,{
             method: 'DELETE',
         })
         .then(res => res.json())
