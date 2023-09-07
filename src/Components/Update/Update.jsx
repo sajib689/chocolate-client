@@ -15,7 +15,7 @@ const Update = () => {
         const category = form.category.value
         const image = form.image.value
         const chocolateFormData = {name, country, category,image}
-        fetch(`http://localhost:3000/chocolates/${_id}`,{
+        fetch(`https://chocolate-server-blush.vercel.app/chocolates/${_id}`,{
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
